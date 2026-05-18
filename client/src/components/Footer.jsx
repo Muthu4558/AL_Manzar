@@ -347,21 +347,6 @@ const Footer = () => {
 
                         </div>
 
-                        {/* QUOTE CARD */}
-                        <div
-                            className="
-      mt-6
-      rounded-[24px]
-      border border-white/10
-      bg-white/[0.03]
-      backdrop-blur-xl
-      px-5 md:px-6
-      py-4 md:py-5
-      overflow-hidden
-    "
-                        >
-                        </div>
-
                     </div>
 
                 </div>
