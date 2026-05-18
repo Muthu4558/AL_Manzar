@@ -159,11 +159,11 @@ const Navbar = () => {
 
                   <div className="space-y-2 sm:space-y-3 md:space-y-5">
                     <p className="text-[1rem] sm:text-[1.1rem] md:text-[2rem] text-black break-all">
-                      support@almanzar.com
+                      Support@almanzar.digital 
                     </p>
 
                     <p className="text-[1rem] sm:text-[1.1rem] md:text-[2rem] text-black">
-                      +971 00 000 0000
+                      +971 56 142 4235
                     </p>
                   </div>
 
