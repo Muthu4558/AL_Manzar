@@ -134,7 +134,7 @@ const Navbar = () => {
                       transition={{
                         delay: index * 0.08,
                       }}
-                      className="block text-[2.2rem] sm:text-[2.8rem] md:text-[4rem] lg:text-[3rem] font-semibold text-black hover:text-[#f59e0b] transition-all duration-300 leading-none"
+                      className="block text-[2.2rem] sm:text-[2.8rem] md:text-[4rem] lg:text-[2.5rem] font-semibold text-black hover:text-[#f59e0b] transition-all duration-300 leading-none"
                     >
                       {item.name}
                     </motion.a>
