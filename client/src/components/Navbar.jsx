@@ -4,12 +4,34 @@ import { Menu, X } from "lucide-react";
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 const navLinks = [
-  "Home",
-  "Services",
-  "Industries",
-  "Why Us",
-  "About Us",
-  "Contact Us",
+  {
+    name: "Home",
+    link: "#home",
+  },
+  {
+    name: "Services",
+    link: "#services",
+  },
+  {
+    name: "Industries",
+    link: "#industries",
+  },
+  {
+    name: "Why Us",
+    link: "#whyus",
+  },
+  {
+    name: "Process",
+    link: "#process",
+  },
+  {
+    name: "About Us",
+    link: "#about",
+  },
+  {
+    name: "Contact Us",
+    link: "#contact",
+  },
 ];
 
 const Navbar = () => {
@@ -105,7 +127,7 @@ const Navbar = () => {
                   {navLinks.map((item, index) => (
                     <motion.a
                       key={index}
-                      href="/"
+                      href={item.link}
                       onClick={() => setOpen(false)}
                       initial={{ opacity: 0, x: -40 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -114,7 +136,7 @@ const Navbar = () => {
                       }}
                       className="block text-[2.2rem] sm:text-[2.8rem] md:text-[4rem] lg:text-[3rem] font-semibold text-black hover:text-[#f59e0b] transition-all duration-300 leading-none"
                     >
-                      {item}
+                      {item.name}
                     </motion.a>
                   ))}
                 </div>

@@ -2,25 +2,21 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
-    Building2,
     Home,
-    LampDesk,
-    Cpu,
-    Store,
     UtensilsCrossed,
-    Hotel,
-    Trees,
-    Landmark,
-    Users,
-    BriefcaseBusiness,
+    Plane,
+    ShoppingBag,
     Sparkles,
-    MonitorSmartphone,
-    Coffee,
-    Wine,
-    LayoutGrid,
-    Building,
-    Palette,
-    Globe,
+    HeartPulse,
+    GraduationCap,
+    BriefcaseBusiness,
+    Cpu,
+    ShoppingCart,
+    ChartColumn,
+    Hammer,
+    Music2,
+    BadgeDollarSign,
+    UserRound,
 } from "lucide-react";
 
 // Register GSAP Plugin
@@ -45,20 +41,20 @@ const Industries = () => {
             title: "Residential",
             industries: [
                 {
-                    name: "Luxury Villas",
+                    name: "Real Estate",
                     icon: Home,
                 },
                 {
-                    name: "Apartments",
-                    icon: Building2,
+                    name: "Restaurants & Cafés",
+                    icon: UtensilsCrossed,
                 },
                 {
-                    name: "Townhouses",
-                    icon: LayoutGrid,
+                    name: "Travel & Tourism",
+                    icon: Plane,
                 },
                 {
-                    name: "Smart Homes",
-                    icon: LampDesk,
+                    name: "Retail Shops",
+                    icon: ShoppingBag,
                 },
             ],
             img: "/portfolio/residential/cover.png",
@@ -70,20 +66,20 @@ const Industries = () => {
             title: "Commercial",
             industries: [
                 {
-                    name: "Corporate Offices",
-                    icon: BriefcaseBusiness,
-                },
-                {
-                    name: "Retail Stores",
-                    icon: Store,
-                },
-                {
-                    name: "Restaurants",
-                    icon: UtensilsCrossed,
-                },
-                {
-                    name: "Showrooms",
+                    name: "Fashion & Beauty",
                     icon: Sparkles,
+                },
+                {
+                    name: "Clinics & Healthcare",
+                    icon: HeartPulse,
+                },
+                {
+                    name: "Education & Training",
+                    icon: GraduationCap,
+                },
+                {
+                    name: "Business Setup",
+                    icon: BriefcaseBusiness,
                 },
             ],
             img: "/portfolio/commercial/cover.png",
@@ -95,20 +91,20 @@ const Industries = () => {
             title: "Interior",
             industries: [
                 {
-                    name: "Living Spaces",
-                    icon: Home,
+                    name: "Software & IT",
+                    icon: Cpu,
                 },
                 {
-                    name: "Workspaces",
-                    icon: MonitorSmartphone,
+                    name: "E-commerce",
+                    icon: ShoppingCart,
                 },
                 {
-                    name: "Hospitality",
-                    icon: Hotel,
+                    name: "Trading Companies",
+                    icon: ChartColumn,
                 },
                 {
-                    name: "Luxury Interiors",
-                    icon: Palette,
+                    name: "Construction",
+                    icon: Hammer,
                 },
             ],
             img: "/portfolio/interior/cover.png",
@@ -120,49 +116,20 @@ const Industries = () => {
             title: "Hospitality",
             industries: [
                 {
-                    name: "Hotels",
-                    icon: Hotel,
+                    name: "Events & Entertainment",
+                    icon: Music2,
                 },
                 {
-                    name: "Resorts",
-                    icon: Globe,
+                    name: "Financial Services",
+                    icon: BadgeDollarSign,
                 },
                 {
-                    name: "Cafés",
-                    icon: Coffee,
-                },
-                {
-                    name: "Fine Dining",
-                    icon: Wine,
+                    name: "Personal Brands",
+                    icon: UserRound,
                 },
             ],
             img: "/portfolio/hospitality/cover.png",
             link: "/portfolio/hospitality",
-        },
-
-        {
-            id: 5,
-            title: "Public Spaces",
-            industries: [
-                {
-                    name: "Parks",
-                    icon: Trees,
-                },
-                {
-                    name: "Museums",
-                    icon: Landmark,
-                },
-                {
-                    name: "Community Spaces",
-                    icon: Users,
-                },
-                {
-                    name: "Urban Landscapes",
-                    icon: Building,
-                },
-            ],
-            img: "/portfolio/public/cover.png",
-            link: "/portfolio/public-space",
         },
     ];
 
@@ -255,7 +222,7 @@ const Industries = () => {
                             ref={addToRefs}
                             className="absolute inset-0 w-full h-full bg-white rounded-[32px] overflow-hidden border border-black/5 shadow-[0_25px_60px_rgba(0,0,0,0.06)] flex flex-col"
                         >
-                        
+
 
                             {/* CONTENT */}
                             <div className="flex-1 flex flex-col justify-between p-6 md:p-8 bg-[#f8f8f6]">
@@ -268,25 +235,124 @@ const Industries = () => {
                                         return (
                                             <div
                                                 key={i}
-                                                className="group bg-white rounded-2xl border border-black/5 p-5 flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                                                className="
+                                                group relative overflow-hidden
+                                                rounded-[28px]
+                                                border border-white/40
+                                                bg-gradient-to-br from-white via-[#fafaf8] to-[#f1f1ed]
+                                                p-6 md:p-7
+                                                backdrop-blur-xl
+                                                transition-all duration-500 ease-out
+                                                hover:-translate-y-2
+                                                hover:shadow-[0_30px_60px_rgba(0,0,0,0.12)]
+                                                hover:border-[#f59e0b]/20
+                                                "
                                             >
-                                                <div className="w-14 h-14 rounded-2xl bg-[#f1f1ef] flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110">
-                                                    <Icon
-                                                        className="w-7 h-7 text-[#111827]"
-                                                        strokeWidth={1.8}
-                                                    />
+
+                                                {/* Glow Effect */}
+                                                <div className="
+                                                    absolute -top-10 -right-10
+                                                    w-32 h-32
+                                                    rounded-full
+                                                    bg-[#f59e0b]/10
+                                                    blur-3xl
+                                                    opacity-0
+                                                    transition-all duration-700
+                                                    group-hover:opacity-100
+                                                " />
+
+                                                {/* Top Row */}
+                                                <div className="flex items-start justify-between mb-2 relative z-10">
+
+                                                    {/* Icon */}
+                                                    <div className="
+                                                        relative
+                                                        w-16 h-16
+                                                        rounded-2xl
+                                                        bg-gradient-to-br from-[#ffffff] to-[#f3f4f6]
+                                                        border border-black/5
+                                                        flex items-center justify-center
+                                                        shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+                                                        transition-all duration-500
+                                                        group-hover:scale-110
+                                                        group-hover:rotate-3
+                                                    ">
+                                                        <Icon
+                                                            className="w-7 h-7 text-[#111827]"
+                                                            strokeWidth={1.7}
+                                                        />
+
+                                                        {/* Icon Glow */}
+                                                        <div className="
+                                                        absolute inset-0 rounded-2xl
+                                                        bg-[#f59e0b]/10
+                                                        blur-xl opacity-0
+                                                        group-hover:opacity-100
+                                                        transition-all duration-500
+                                                    " />
+                                                    </div>
+
+                                                    {/* Number */}
+                                                    <span className="
+                                                        text-[11px]
+                                                        font-semibold
+                                                        tracking-[0.25em]
+                                                        text-black/30
+                                                        uppercase
+                                                    ">
+                                                        0{i + 1}
+                                                    </span>
                                                 </div>
 
-                                                <p className="text-sm md:text-base font-medium text-[#111827] leading-snug">
-                                                    {industry.name}
-                                                </p>
+                                                {/* Content */}
+                                                <div className="relative z-10">
+
+                                                    <h3 className="
+                                                        text-[18px] md:text-[20px]
+                                                        font-semibold
+                                                        tracking-tight
+                                                        text-[#111827]
+                                                        leading-tight
+                                                    ">
+                                                        {industry.name}
+                                                    </h3>
+
+
+
+                                                </div>
+
+                                                {/* Bottom Line */}
+                                                <div className="
+                                                    mt-8
+                                                    flex items-center justify-between
+                                                    relative z-10
+                                                ">
+
+                                                    <div className="
+                                                        w-12 h-[2px]
+                                                        bg-gradient-to-r
+                                                        from-[#f59e0b]
+                                                        to-transparent
+                                                        transition-all duration-500
+                                                        group-hover:w-20
+                                                    " />
+
+                                                </div>
+
+                                                {/* Noise Overlay */}
+                                                <div className="
+                                                    absolute inset-0 opacity-[0.03]
+                                                    bg-[radial-gradient(#000_1px,transparent_1px)]
+                                                    [background-size:16px_16px]
+                                                    pointer-events-none
+                                                " />
                                             </div>
                                         );
                                     })}
                                 </div>
 
                                 {/* BUTTON */}
-                                <div className="mt-8 flex justify-end">
+                                {/* <div className="mt-8 flex justify-end">
                                     <a
                                         href={project.link}
                                         className="group flex items-center gap-3 text-[#111827] text-xs font-semibold tracking-[0.25em] uppercase"
@@ -309,7 +375,7 @@ const Industries = () => {
                                             </svg>
                                         </span>
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     ))}
